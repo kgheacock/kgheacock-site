@@ -1,8 +1,41 @@
 {
   "dependencies": {
-    "express": "^4.17.1",
-    "express-ws": "^2.0.0"
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.11.0",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ws": "^2.0.0",
+    "helmet": "^7.1.0",
+    "lodash": "^4.17.21",
+    "parcel-bundler": "^1.12.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sqlite3": "^5.1.7"
   },
-  "description": "Piku node example.",
-  "name": "piku-example"
+  "description": "Keith Heacock's Portfolio",
+  "name": "kgheacock-portfolio",
+  "devDependencies": {
+    "@babel/cli": "^7.24.7",
+    "@babel/core": "^7.24.7",
+    "@babel/node": "^7.24.7",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/register": "^7.24.6",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
+    "concurrently": "^8.2.2",
+    "cpx": "^1.5.0",
+    "mocha": "^10.4.0",
+    "nodemon": "^3.1.4",
+    "process": "^0.11.10",
+    "supertest": "^7.0.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "build": "babel src --out-dir dist && npm run copy-non-transformed",
+    "copy-non-transformed": "cpx 'src/**/*.{json,css,ejs}' dist",
+    "dev": "concurrently \"parcel src/index.html --out-dir dist --public-url /\" \"babel-node server/index.mjs\""
+  }
 }
