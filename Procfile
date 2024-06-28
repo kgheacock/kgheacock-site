@@ -1,2 +1,1 @@
-web: ./index.js 2>&1 | cat
-release: ./hello.js
+web: ./dist/index.js 2>&1 | cat
