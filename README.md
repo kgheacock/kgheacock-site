@@ -1,5 +1,4 @@
-# kgheacock-site NodeJS Application for `piku`
-
+# kgheacock-site NodeJS `piku` instace + `qdrant` + `fail2ban`
 
 ```bash
 git remote add piku piku@kgheacock.com:kgheacock-site
