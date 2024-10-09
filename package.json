@@ -2,7 +2,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.2",
     "@qdrant/js-client-rest": "^1.10.0",
-    "cookie": "^0.6.0",
+    "cookie": "^0.7.0",
     "csurf": "^1.11.0",
     "express": "^4.19.2",
     "next": "^14.2.4",
